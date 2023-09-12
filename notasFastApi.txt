@@ -1,0 +1,30 @@
+- INSTALACIÓN
+
+    pip install "fastapi[all]"
+
+En este comando viene incluido el servidor: uvicorn.
+Para instalarlo por separado:
+
+    pip install fastapi
+    pip install "uvicorn[standard]"
+
+- Creamos un archivo main.py
+
+    · Importamos fastapi: from fastapi import FastAPI
+    · Creamos una variable para utilarla: app = FastAPI()
+    · Utilizamos @app. para acceder a los métodos
+
+- Levantamos el servidor:
+
+    uvicorn main:app --reload
+
+    · 'main' es el mombre del archivo
+    · 'app' el nombre de la variable que hemos declarado para usar fastapi
+    · Se abre en el localHost http://127.0.0.1:8000
+
+ En el main solo podemos tener una operación get.   
+
+ - Generar documentación
+
+ Lo hacemos con swagger: Simplemente http://127.0.0.1:8000/docs
+ También con redoc: http://127.0.0.1:8000/redoc
